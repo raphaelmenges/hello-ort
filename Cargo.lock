@@ -422,7 +422,7 @@ dependencies = [
 [[package]]
 name = "ort"
 version = "2.0.0-rc.9"
-source = "git+https://github.com/pykeio/ort?rev=cfc5a7083f9af6c4313cea94077fcde853a8dd62#cfc5a7083f9af6c4313cea94077fcde853a8dd62"
+source = "git+https://github.com/pykeio/ort#5b99e7a0cac717870e9bc4996d59984bfa3e1f59"
 dependencies = [
  "ndarray",
  "ort-sys",
@@ -434,7 +434,7 @@ dependencies = [
 [[package]]
 name = "ort-sys"
 version = "2.0.0-rc.9"
-source = "git+https://github.com/pykeio/ort?rev=cfc5a7083f9af6c4313cea94077fcde853a8dd62#cfc5a7083f9af6c4313cea94077fcde853a8dd62"
+source = "git+https://github.com/pykeio/ort#5b99e7a0cac717870e9bc4996d59984bfa3e1f59"
 dependencies = [
  "flate2",
  "pkg-config",
