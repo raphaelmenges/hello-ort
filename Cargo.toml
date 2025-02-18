@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 ort = { git = "https://github.com/pykeio/ort", features = [
-    "ndarray", "download-binaries", "fetch-models"
+    "ndarray", "download-binaries", "fetch-models", "xnnpack"
 ], default-features = false }
 ndarray = "0.16"
 anyhow = "1"
