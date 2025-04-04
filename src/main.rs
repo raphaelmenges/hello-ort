@@ -1,12 +1,16 @@
-use ort::{execution_providers::OpenVINOExecutionProvider, session::Session};
+use ndarray::{Array, ArrayBase, Dim, OwnedRepr};
+use ort::{
+    execution_providers::OpenVINOExecutionProvider, inputs, session::Session, value::TensorRef,
+};
 
-const YOLOV8M_URL: &str =
-    "https://parcel.pyke.io/v2/cdn/assetdelivery/ortrsv2/ex_models/yolov8m.onnx";
+const YOLOV8M_URL: &str = "https://cdn.pyke.io/0/pyke:ort-rs/example-models@0.0.0/yolov8m.onnx";
 
 fn main() -> anyhow::Result<()> {
-    let _builder = Session::builder()?
+    let mut session = Session::builder()?
         .with_execution_providers([OpenVINOExecutionProvider::default().build()])?
         .commit_from_url(YOLOV8M_URL)?;
+    let input: ArrayBase<OwnedRepr<f32>, Dim<[usize; 4]>> = Array::zeros((1, 3, 640, 640));
+    let _outputs = session.run(inputs!["images" => TensorRef::from_array_view(&input)?])?;
     println!("{}", "This did not crash, good!");
     Ok(())
 }
