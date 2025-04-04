@@ -1,2 +1,5 @@
 target
 .DS_Store
+onnxruntime.lib
+onnxruntime_providers_openvino.dll
+onnxruntime_providers_shared.dll
