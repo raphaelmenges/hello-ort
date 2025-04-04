@@ -1,10 +1,10 @@
 [package]
 name = "hello-ort"
 version = "0.0.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
-ort = { git = "https://github.com/pykeio/ort", features = [
+ort = { git = "https://github.com/pykeio/ort", rev = "ee0354c", features = [
     "ndarray", "download-binaries", "fetch-models"
 ], default-features = false }
 ndarray = "0.16"
