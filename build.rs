@@ -1,6 +1,6 @@
 use reqwest::blocking::get;
 use std::{
-    fs::{File, create_dir_all, exists, remove_file},
+    fs::{File, create_dir_all},
     io::{Cursor, Read, Write},
 };
 use zip::ZipArchive;
