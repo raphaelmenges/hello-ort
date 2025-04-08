@@ -4,7 +4,7 @@ version = "0.0.0"
 edition = "2024"
 
 [dependencies]
-ort = { git = "https://github.com/pykeio/ort", rev = "ee0354c", features = [
+ort = { git = "https://github.com/pykeio/ort", rev = "6e44003", features = [
     "ndarray", "download-binaries", "fetch-models", "openvino"
 ], default-features = false }
 ndarray = "0.16"
